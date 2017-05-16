@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1494948457 source:d:\imaginario\main.cpp
+	<iostream>
+	"Complejo.h"
+
+1494948308 d:\imaginario\include\complejo.h
+
+1494948308 source:d:\imaginario\src\complejo.cpp
+	"Complejo.h"
+	<iostream>
+
