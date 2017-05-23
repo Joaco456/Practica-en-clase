@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1495553898 source:c:\users\alumno-a\desktop\practica\main.cpp
+	<iostream>
+	<Persona.h>
+	<Doctor.h>
+	<Ingeniero.h>
+
+1495553916 c:\users\alumno-a\desktop\practica\include\persona.h
+	<iostream>
+
+1495553763 c:\users\alumno-a\desktop\practica\include\doctor.h
+	"Persona.h"
+
+1495554084 source:c:\users\alumno-a\desktop\practica\src\doctor.cpp
+	"Doctor.h"
+	<iostream>
+
+1495552559 source:c:\users\alumno-a\desktop\practica\src\persona.cpp
+	"Persona.h"
+	<iostream>
+
+1495554084 source:c:\users\alumno-a\desktop\practica\src\ingeniero.cpp
+	"Ingeniero.h"
+	<iostream>
+
+1495553763 c:\users\alumno-a\desktop\practica\include\ingeniero.h
+	"Persona.h"
+
