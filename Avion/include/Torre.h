@@ -7,7 +7,9 @@ class Torre
     public:
         Torre();
         virtual ~Torre();
+
     protected:
+
     private:
 };
 

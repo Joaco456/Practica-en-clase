@@ -1,11 +1,23 @@
 #include "Avion.h"
+#include <vector>
+#include <iostream>
 
-Avion::Avion()
+using namespace std;
+
+
+Avion::Avion(string _linea,string _piloto)
 {
-    //ctor
+    linea = _linea;
+    piloto = _piloto;
 }
+
+void Avion::MostrarDatos(){
+    cout<<"Linea del avion: "<<linea<<endl;
+    cout<<"Nombre Piloto: "<<piloto<<endl;
+}
+
 
 Avion::~Avion()
 {
-    //dtor
+    cout<<"May Day May Day"<<endl;
 }
