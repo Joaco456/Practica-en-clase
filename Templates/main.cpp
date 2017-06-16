@@ -41,12 +41,23 @@ Stack<T> operator-(const Stack<T> &s1, const Stack<T> &s2)
 
     return result;
 }
+template <class T>
+Stack<T>  ostream& operator <<(ostream &output, const Stack<T> &s1)
+{
+    for(int i = 0; i<s1.items.size(); i++){
+        output<<Stack[i]<<endl;
+    }
+
+
+    return output;
+}
 
 template <class T>
 class Stack{
 
     friend Stack<T> operator +<>(const Stack<T> &s1, const Stack<T> &s2);
     friend Stack<T> operator -<>(const Stack<T> &s1, const Stack<T> &s2);
+    friend Stack<T> ostream &operator <<(ostream &output, const Stack<T> &s1)
     vector <T> items;
 public:
     bool empty() const {return items.empty();}
@@ -80,6 +91,7 @@ int main()
     pilaResultado.Mostrar();
     cout<<endl;
     pilaResultado2.Mostrar();
+    cout<<pilaResultado<<endl;
 
 
 
