@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+
 #include <conio.h>
 
 using namespace std;
@@ -17,34 +18,35 @@ Stack<T> operator +(const Stack<T> &s1, const Stack<T> &s2)
     return result;
 }
 //OPERADOR DE SOBRECARGA -
-/*template<class T>
+template<class T>
 Stack<T> operator-(const Stack<T> &s1, const Stack<T> &s2)
 {
     Stack<T> result;
-    //vector<T> result=s1;
-    vector<T> temp;
-    for(unsigned i=0;i<s1.items.size();++i)
-        temp.push_back(s1.items[i]);
-    for(unsigned i=0; i<s1.items.size();++i)
-    {
-        for(unsigned j=0; j<s1.items.size();++j)
-        {
-            if(result.items[i]==s2.items[j])
-                {
-                    temp.pop_back(result.items[i]);
+
+    //vector<T> temp;
+    for(unsigned i = 0; i < s1.items.size(); ++i){
+            bool temp = false;
+            for(unsigned j = 0; j< s2.items.size(); ++j){
+                if(s1.items[i]==s2.items[j]){
+                    temp == true;
                 }
-        }
+            if(temp == false)
+                result.push(s1.items[j]);
     }
-    for(unsigned i=0;i<temp.size();++i)
-        result.push()
+    return result;
+
+}
+
+
+
     return result;
 }
-*/
+
 template <class T>
 class Stack{
 
     friend Stack<T> operator +<>(const Stack<T> &s1, const Stack<T> &s2);
- //   friend Stack<T> operator -<>(const Stack<T> &s1, const Stack<T> &s2);
+    friend Stack<T> operator -<>(const Stack<T> &s1, const Stack<T> &s2);
     vector <T> items;
 public:
     bool empty() const {return items.empty();}
@@ -68,13 +70,16 @@ int main()
     pila1.push(1);
     pila1.push(2);
     pila1.push(3);
-    pila2.push(4);
+
+    pila2.push(1);
     pila2.push(5);
     pila2.push(6);
+
     Stack<int> pilaResultado = pila1+pila2;
-   // Stack<int> pilaResultado2 = pila1-pila2;
+    Stack<int> pilaResultado2 = pila1-pila2;
     pilaResultado.Mostrar();
-    //pilaResultado2.Mostrar();
+    cout<<endl;
+    pilaResultado2.Mostrar();
 
 
 
