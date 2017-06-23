@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1498197995 source:d:\cola\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+
