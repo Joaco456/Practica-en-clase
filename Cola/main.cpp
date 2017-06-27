@@ -14,6 +14,23 @@ Cola<P> operator+(const Cola<P> &c1, const Cola<P> &c2)
     }
     return result;
 }
+template <typename T>
+Cola<T> operator -(const Cola <T> &c1, const Cola<T> &c2)
+{
+    Cola<T> result;
+    for(unsigned i=0; i<c1.items.size();i++)
+    {
+        bool temp=false;
+        for(unsigned j=0; j<c2.items.size();j++)
+        {
+            if(c1.items[i]==c2.items[j])
+                temp=true;
+        }
+        if(temp==false)
+            result.push(c1.items[i]);
+    }
+    return result;
+}
 
 template<class P>
 ostream &operator<<(ostream &o,const Cola<P> &c1)
@@ -26,6 +43,7 @@ ostream &operator<<(ostream &o,const Cola<P> &c1)
 template <class P>
 class Cola{
     friend Cola<P> operator +<>(const Cola<P> &c1, const Cola<P> &c2);
+    friend Cola<P> operator -<>(const Cola<P> &c1, const Cola<P> &c2);
     friend ostream &operator<<(ostream &o,const Cola<P> &c1);
     vector <P> items;
 public:
@@ -53,8 +71,11 @@ int main()
     b.push(6.4);
     b.push(7.2);
     Cola<float> c = a+b;
+    Cola<float> d = a-b;
     c.mostrar();
-    cout<<c<<endl;
+    cout<<endl;
+    d.mostrar();
+    //cout<<c1<<endl;
 
 
 
