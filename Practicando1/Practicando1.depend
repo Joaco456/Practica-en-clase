@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1499229631 source:d:\practicando1\main.cpp
+	<iostream>
+	<stdlib.h>
+
+1499229877 source:d:\practicando1\src\delantero.cpp
+	"Delantero.h"
+
+1499229877 d:\practicando1\include\delantero.h
+
+1499229958 source:d:\practicando1\src\futbolista.cpp
+	"Futbolista.h"
+	<iostream>
+	<stdlib.h>
+
+1499230013 d:\practicando1\include\futbolista.h
+	<iostream>
+	<stdlib.h>
+
